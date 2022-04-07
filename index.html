@@ -9,6 +9,30 @@
     <link rel="shortcut icon" href="favi.ico">
 </head>
 <body>
+    <div id="clock">0:0:0</div>
+    <script>
+        window.onload = function () {
+            window.setInterval(function() {
+                var date = new Date();
+
+                var hours = date.getHours();
+                var minutes = date.getMinutes();
+                var second = date.getSeconds();
+
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                } 
+                if (second < 10) {
+                    second = "0" + second;
+                }  
+                var clock = hours + ":" + minutes + ":" + second;
+                document.getElementById("clock").innerHTML = clock;
+            }, 1000);
+        }
+    </script>
     <header>
         
         <div class="me">
@@ -43,21 +67,22 @@
                         <div class="info__courses__course-and-position"> <!--обьединящий блок с информацией о курсах-->
                             <div class="info__courses__course__name-course">Школа 21</div> <!--название или где проходил курс-->
                             <div class="info__courses__course__organization">Сбербанк</div> <!--организация проводившая курс-->
-                            <div class="info__courses__course__topic">Бассейн></div> <!--тема курса-->
+                            <div class="info__courses__course__topic">Pool</div> <!--тема курса-->
                         </div>
                     </div>
                     <div class="info__courses__course">
                         <div class="info__courses__course__date">Июнь 2021</div>
                         <div class="info__courses__course-and-position">
-                            <div class="info__courses__course__name-course">Stepik</div>
-                            <div class="info__courses__course__organization">Mail.ru</div>
+                            <div class="info__courses__course__name-course"><a href="https://stepik.org/cert/975696">Stepik</a></div>
+                            <div class="info__courses__course__organization">egoroff_channel</div>
                             <div class="info__courses__course__topic">Python</div>
                         </div>
                     </div>
                     <div class="info__courses__course">
                         <div class="info__courses__course__date">Март 2022</div>
                         <div class="info__courses__course-and-position">
-                            <div class="info__courses__course__name-course">Stepik</div>
+                            <div class="info__courses__course__name-course"><a href="https://stepik.org/cert/1454360">
+                                Stepik</a></div>
                             <div class="info__courses__course__organization">ITC</div>
                             <div class="info__courses__course__topic">HTML / CSS</div>
                         </div>
